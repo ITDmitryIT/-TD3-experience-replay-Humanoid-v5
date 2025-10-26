@@ -1,18 +1,23 @@
-# -TD3-experience-replay-Humanoid-v5
-Reinforcement Learning: TD3 с PER для Humanoid-v5
-# Реализация TD3 с PER для Humanoid-v5
+# TD3 с PER для Humanoid-v5
 
-Это Jupyter Notebook с реализацией алгоритма TD3 (Twin Delayed Deep Deterministic Policy Gradient) с приоритетным experience replay (PER) для среды Humanoid-v5 из Gymnasium.
+Реализация алгоритма TD3 (Twin Delayed Deep Deterministic Policy Gradient) с приоритетным experience replay (PER) для обучения гуманоида ходить в среде Humanoid-v5 из Gymnasium.
 
-## Содержание
-- Введение и методология.
-- Код реализации агентов (TD3, DDPG, PPO).
-- Обучение и визуализация результатов.
-- Выводы.
+## Задача
+Цель проекта — сравнить производительность и стабильность алгоритмов обучения с подкреплением (TD3 с PER, TD3 без PER, DDPG, PPO) в сложной среде с непрерывными действиями. Задача: обучить гуманоида двигаться, максимизируя награду за устойчивость и скорость.
 
-## Требования
-- Python 3.12+
-- Библиотеки: torch, numpy, matplotlib, gymnasium[mujoco]
+## Что сделано
+- Реализованы алгоритмы TD3 (с PER и без), DDPG и PPO.
+- Проведено обучение на 1000 эпизодов в среде Humanoid-v5.
+- Выполнена визуализация наград и дисперсии за последние 100 эпизодов.
+- Составлена таблица сравнения производительности (средняя награда, дисперсия, время обучения).
+- Сформулированы выводы о преимуществах TD3 с PER (средняя награда ~320, дисперсия на 30% ниже DDPG).
 
-## Запуск
-Откройте файл в Jupyter Notebook или Google Colab.
+## Технологии
+- **Язык**: Python 3.12
+- **Библиотеки**: PyTorch, NumPy, Matplotlib, Gymnasium (MuJoCo)
+- **Почему этот стек**: PyTorch для гибкости нейронных сетей, Gymnasium для стандартизированной среды RL, Matplotlib для визуализации.
+
+## Установка и запуск
+1. Установите зависимости:
+   ```bash
+   pip install torch numpy matplotlib 'gymnasium[mujoco]'

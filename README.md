@@ -21,3 +21,36 @@
 1. Установите зависимости:
    ```bash
    pip install torch numpy matplotlib 'gymnasium[mujoco]'
+
+2. Скачайте репозиторий:
+   ```bash
+   git clone https://github.com/ITDmitryIT/TD3-PER-Humanoid-v5.git
+
+3. Запустите Jupyter Notebook:
+   ```bash
+   jupyter notebook 46_ПРАКТИЧЕСКАЯ_РАБОТА_№3.ipynb
+
+4. Для работы с MuJoCo на локальной машине установите OpenGL (например, xvfb для headless-рендеринга).
+
+## Результаты
+- Графики: Сравнение наград и дисперсии алгоритмов (см. ноутбук).
+- Таблица
+  <img width="545" height="143" alt="image" src="https://github.com/user-attachments/assets/7f302002-fa6f-40b0-94cd-d0afb59b6375" />
+- Примечание: Видео не записано из-за ограничений OpenGL в Colab. Для визуализации используйте локальную среду с MuJoCo.
+
+## Примеры использования
+- Скриншоты графиков (добавить ссылки на изображения, если загрузите).
+- Для записи видео используйте:
+  ```bash
+  xvfb-run -a -s "-screen 0 1024x768x24" python render_video.py
+
+## Выводы
+TD3 с PER показал лучшую производительность (средняя награда ~320) и стабильность (дисперсия на 30% ниже DDPG). PER ускорил сходимость на 20% по сравнению с DDPG и PPO.
+
+## Рекомендации
+- Настройте параметры PER (α=0.7, β) для оптимизации.
+- Используйте GPU для ускорения (PyTorch CUDA).
+- Добавьте entropy regularization для улучшения исследования.
+
+## Лицензия
+MIT License

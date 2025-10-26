@@ -35,7 +35,7 @@
 ## Результаты
 - Графики: Сравнение наград и дисперсии алгоритмов (см. ноутбук).
 - Таблица
-  <img width="545" height="143" alt="image" src="https://github.com/user-attachments/assets/7f302002-fa6f-40b0-94cd-d0afb59b6375" />
+ -  <img width="545" height="143" alt="image" src="https://github.com/user-attachments/assets/7f302002-fa6f-40b0-94cd-d0afb59b6375" />
 - Примечание: Видео не записано из-за ограничений OpenGL в Colab. Для визуализации используйте локальную среду с MuJoCo.
 
 ## Примеры использования
